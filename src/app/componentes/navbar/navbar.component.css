@@ -1,0 +1,99 @@
+.menu-flap {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background-color: #333; /* Color de fondo del flap */
+    color: #fff; /* Color del texto del flap */
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    border-bottom-left-radius: 50px; /* Bordes redondeados en la esquina inferior izquierda */
+    border-bottom-right-radius: 50px; /* Bordes redondeados en la esquina inferior derecha */
+    font-weight: bold;
+    user-select: none; /* Evitar selección de texto */
+  }
+  
+  .arrow-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Tamaño del triángulo */
+    border-right: 50px solid transparent; /* Tamaño del triángulo */
+    border-top: 30px solid #333; /* Color de fondo del triángulo */
+    display: none; /* Ocultar el triángulo */
+  }
+  
+  .navbar {
+   
+  
+    
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: #333; /* Color de fondo del navbar */
+    color: #fff; /* Color del texto del navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 998;
+    transition: top 0.3s ease-in-out;
+    overflow: hidden; /* Ocultar contenido al inicio */
+    user-select: none; /* Evitar selección de texto */
+  }
+  
+  .navbar.show-navbar {
+    padding-top: 50px;
+    top: 0px;
+  }
+  
+  .nav-button {
+    
+    text-decoration: none;
+    color: #fff; /* Color de los botones */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+    user-select: none; /* Evitar selección de texto */
+  }
+  
+  .nav-button:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+  }
+  
+  .sub-menu {
+    background-color: #333;
+    display: none;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 20px; /* Bordes redondeados en la esquina superior izquierda */
+    border-top-right-radius: 20px; /* Bordes redondeados en la esquina superior derecha */
+  }
+  
+  .show-sub-menu {
+    display: block;
+  }
+  
+  .sub-menu-item {
+    text-decoration: none;
+    color: #fff; /* Color de los elementos del submenú */
+    padding: 10px 0;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+    user-select: none; /* Evitar selección de texto */
+  }
+  
+  .sub-menu-item:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+  }
+  

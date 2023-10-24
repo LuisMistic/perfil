@@ -1,0 +1,7 @@
+<ng-container *ngIf="servicioCompartido.currentComponent === 'inicial' || servicioCompartido.currentComponent === 'default'">
+    <app-inicial></app-inicial>
+  </ng-container>
+  
+      <ng-container *ngIf="servicioCompartido.currentComponent === 'miPerfil'">
+        <app-mi-perfil></app-mi-perfil>
+      </ng-container>
