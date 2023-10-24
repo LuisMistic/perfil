@@ -1,0 +1,29 @@
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Color de fondo negro */
+    overflow: hidden;
+  }
+  
+  .matrix-text {
+    font-family: 'MatrixFont', monospace; /* Utiliza la fuente Matrix */
+    color: #00FF00; /* Color verde */
+    position: absolute;
+    top: 0;
+    left: 50%; /* Alinea el texto en el centro */
+    transform: translateX(-50%);
+    animation: matrix-rain 5s linear infinite; /* Animación para hacer caer el código */
+  }
+  
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  

@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     left: 50%;
+   
     transform: translateX(-50%);
     width: 100px;
     height: 40px;
@@ -33,7 +34,7 @@
   
   .navbar {
    
-  
+    border-radius: 0px 0px 200px 200px;
     
     position: fixed;
     top: -150px;
@@ -71,29 +72,18 @@
     background-color: #555; /* Color de fondo al pasar el ratón */
   }
   
-  .sub-menu {
-    background-color: #333;
-    display: none;
-    width: 100%;
-    text-align: center;
-    border-top-left-radius: 20px; /* Bordes redondeados en la esquina superior izquierda */
-    border-top-right-radius: 20px; /* Bordes redondeados en la esquina superior derecha */
-  }
-  
-  .show-sub-menu {
-    display: block;
-  }
-  
-  .sub-menu-item {
-    text-decoration: none;
-    color: #fff; /* Color de los elementos del submenú */
-    padding: 10px 0;
-    width: 100%;
-    transition: background-color 0.2s ease-in-out;
-    user-select: none; /* Evitar selección de texto */
-  }
-  
-  .sub-menu-item:hover {
-    background-color: #555; /* Color de fondo al pasar el ratón */
-  }
-  
+/* Estilo del contenedor principal */
+.main-section {
+  overflow: hidden;
+  width: 100vw; /* Ancho igual al ancho de la ventana */
+  height: 100vh; /* Alto igual al alto de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Estilo para la animación de la imagen */
+.animate-logo {
+  animation: slide-down 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  display: block; /* Esto asegura que la imagen se muestre como un bloque */
+  margin: 0 auto; /* Centra horizontalmente */
+}

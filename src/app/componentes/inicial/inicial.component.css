@@ -1,7 +1,34 @@
-* {
-    background-color: bisque;
+
+  /* Estilo del contenedor principal */
+/* Estilo del contenedor principal */
+.main-section {
+   
+    overflow: hidden;
+    width: 100vw; /* Ancho igual al ancho de la ventana */
+    height: 100vh; /* Alto igual al alto de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.inicial {
-    font-size: 15%;
+  
+  /* Estilo para la animación de la imagen */
+ /* Estilo para la animación de la imagen */
+.animate-logo {
+    margin-top:470px !important;
+    animation: slide-down 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+    display: block; /* Esto asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
 }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
