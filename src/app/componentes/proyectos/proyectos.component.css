@@ -1,0 +1,78 @@
+.square {
+  width: calc(25% - 20px); /* El 20px es el espacio entre los cuadrados */
+  height: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px; /* Puntas redondeadas */
+  margin: 0px;
+  padding: 120px;
+  transition: transform 0.3s;
+}
+
+.square:hover {
+  transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+}
+
+/* Clases de colores para los cuadrados */
+.red {
+  background-color: #ff5733;
+  color: white;
+}
+
+.blue {
+  background-color: #3498db;
+  color: white;
+}
+
+.green {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.yellow {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.pink {
+  background-color: #e91e63;
+  color: white;
+}
+
+.purple {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.orange {
+  background-color: #f39c12;
+  color: white;
+}
+
+.brown {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.gray {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.black {
+  background-color: #34495e;
+  color: white;
+}
+
+/* Clases de colores adicionales para los cuadrados */
+.teal {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.lime {
+  background-color: #cddc39;
+  color: black;
+}

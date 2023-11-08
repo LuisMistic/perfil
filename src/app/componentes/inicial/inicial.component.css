@@ -1,34 +1,46 @@
 
-  /* Estilo del contenedor principal */
 /* Estilo del contenedor principal */
 .main-section {
-   
-    overflow: hidden;
-    width: 100vw; /* Ancho igual al ancho de la ventana */
-    height: 100vh; /* Alto igual al alto de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  overflow: hidden;
+  width: 100vw; /* Ancho igual al ancho de la ventana */
+  height: 100vh; /* Alto igual al alto de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-  
-  /* Estilo para la animación de la imagen */
- /* Estilo para la animación de la imagen */
+/* Estilo para la animación de la imagen */
 .animate-logo {
-    margin-top:470px !important;
-    animation: slide-down 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
-    display: block; /* Esto asegura que la imagen se muestre como un bloque */
-    margin: 0 auto; /* Centra horizontalmente */
+  margin-top: 470px !important;
+  animation: slide-down 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  display: block; /* Esto asegura que la imagen se muestre como un bloque */
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
-  @keyframes slide-down {
-    from {
+/* Estilo para la animación inversa */
+.animate-logo-reverse {
+  animation: slide-up 1.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+@keyframes slide-down {
+  from {
       transform: translateY(-100%);
       opacity: 0;
-    }
-    to {
+  }
+  to {
       transform: translateY(0);
       opacity: 1;
-    }
   }
-  
+}
+
+/* Define la animación inversa */
+@keyframes slide-up {
+  from {
+      transform: translateY(0); /* Comienza desde la posición actual */
+      opacity: 1; /* Comienza con opacidad completa */
+  }
+  to {
+      transform: translateY(-100%); /* Termina arriba de la pantalla */
+      opacity: 0; /* Termina con opacidad nula */
+  }
+}

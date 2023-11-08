@@ -1,12 +1,9 @@
-<div class="menu-flap" (click)="toggleNavbar()">
-    <span class="flap-text">{{ flapText }}</span>
-    <div class="arrow-down"></div>
-  </div>
-  <div class="navbar" [ngClass]="{ 'show-navbar': expanded }">
-   
-    <a class="nav-button" href="#" (click)="cambiarComponente('miPerfil')">Quién soy</a>
-    <a class="nav-button" href="#">Proyectos</a>
-    <a class="nav-button" href="#">Contacto</a>
-   
-  </div>
-  
+<div class="">
+
+  <div class="arrow-down"></div>
+</div>
+<div class="navbar show-navbar">
+  <a class="nav-button a1" id="a1" (click)="cambiarComponente('miPerfil')">Quién soy</a>
+  <a class="nav-button a2" id="a2" (click)="cambiarComponente('proyecto')">Proyectos</a>
+  <a class="nav-button a3" id="a3" href="#">Contacto</a>
+</div>

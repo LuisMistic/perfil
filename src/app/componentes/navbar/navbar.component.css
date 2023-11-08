@@ -33,45 +33,116 @@
   }
   
   .navbar {
-   
     border-radius: 0px 0px 200px 200px;
-    
     position: fixed;
     top: -150px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    
+    width: 100%; /* Cambia el ancho a 100% para ocupar todo el ancho horizontal */
     background-color: #333; /* Color de fondo del navbar */
     color: #fff; /* Color del texto del navbar */
     display: flex;
-    flex-direction: column;
+    justify-content: space-around; /* Esto hará que los botones se muestren de forma horizontal */
     align-items: center;
     z-index: 998;
     transition: top 0.3s ease-in-out;
     overflow: hidden; /* Ocultar contenido al inicio */
     user-select: none; /* Evitar selección de texto */
-  }
+}
   
   .navbar.show-navbar {
     padding-top: 50px;
     top: 0px;
   }
+  .navbar {
+   
+    animation: slide-down 3s cubic-bezier(0.8, -.55, 0.27, 1.55);
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(50);
+      opacity: 1;
+    }
+  }
   
-  .nav-button {
+/* Estilo para los botones del navbar */
+.nav-button {
+  text-decoration: none;
+  color: #fff;
+   padding-bottom: 80px !important;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out;
+  user-select: none;
+  flex-grow: 1; /* Hace que los botones ocupen todo el espacio disponible */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-button:hover {
+  background-color: #555; /* Cambio de color de fondo al pasar el ratón */
+  box-shadow: 10 0 10px rgba(0, 20, 0, 4.3); /* Efecto de relieve al pasar el ratón */
+}
+
+@media only screen and (min-width: 1025px) {
+  #a1{
+    border: 2px solid rgb(92, 90, 90);
+    font-size: 40px;
+    padding: 40px 40px;
+    margin: -50px;
+    display: flex;
+    justify-content: center;
+  
+  }
+  #a2{
     
-    text-decoration: none;
-    color: #fff; /* Color de los botones */
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    transition: background-color 0.2s ease-in-out;
-    user-select: none; /* Evitar selección de texto */
+    border: 2px solid rgb(92, 90, 90);
+    font-size: 40px;
+    padding: 40px;
+    margin: -50px;
+    display: flex;
+    justify-content: center;
+  }
+  #a3{
+    border: 2px solid rgb(92, 90, 90);
+    font-size: 40px;
+    padding: 40px;
+    margin: -50px;
+    display: flex;
+    justify-content: center;
   }
   
-  .nav-button:hover {
-    background-color: #555; /* Color de fondo al pasar el ratón */
-  }
-  
+  @media only screen and (max-width: 480px) {
+    #a1{
+      border: 2px solid rgb(92, 90, 90);
+      font-size: 20px;
+      padding: 20px 40px;
+      margin: 30px !important;
+    
+    
+    }
+    #a2{
+      
+      border: 2px solid rgb(92, 90, 90);
+      font-size: 30px;
+      padding: 80px;
+      margin: -30px;
+     
+    }
+    #a3{
+      border: 2px solid rgb(92, 90, 90);
+      font-size: 20px;
+      padding: 40px;
+      margin: -30px;
+     
+    }
+}
 /* Estilo del contenedor principal */
 .main-section {
   overflow: hidden;
@@ -86,4 +157,6 @@
   animation: slide-down 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
   display: block; /* Esto asegura que la imagen se muestre como un bloque */
   margin: 0 auto; /* Centra horizontalmente */
+}
+
 }
