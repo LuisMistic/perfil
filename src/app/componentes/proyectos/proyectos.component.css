@@ -1,78 +1,220 @@
-.square {
-  width: calc(25% - 20px); /* El 20px es el espacio entre los cuadrados */
-  height: 150px;
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Cambia el color de fondo según tus preferencias */
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* Elimina el espacio entre los bloques */
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh; /* Ocupa la altura completa de la pantalla */
+  margin: 0;
+}
+
+.cuadro {
+  width: 100%;
+  height: 100%;
+  border: none;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px; /* Puntas redondeadas */
-  margin: 0px;
-  padding: 120px;
-  transition: transform 0.3s;
+  padding: 20px;
+  font-size: 18px;
 }
 
-.square:hover {
-  transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+/* Estilos específicos para cada botón */
+.boton1 { background-color: #3498db; color: white; }
+.boton2 { background-color: #2ecc71; color: white; }
+.boton3 { background-color: #e74c3c; color: white; }
+.boton4 { background-color: #f39c12; color: white; }
+.boton5 { background-color: #9b59b6; color: white; }
+.boton6 { background-color: #34495e; color: white; }
+
+/* Ajustes específicos para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Clases de colores para los cuadrados */
-.red {
-  background-color: #ff5733;
-  color: white;
+@keyframes slide-from-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.blue {
-  background-color: #3498db;
-  color: white;
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.green {
-  background-color: #2ecc71;
-  color: white;
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.yellow {
-  background-color: #f1c40f;
-  color: white;
+@keyframes slide-left-buttom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.pink {
-  background-color: #e91e63;
-  color: white;
+/* Aplica las animaciones a los elementos específicos */
+.start-from-left {
+  animation: slide-from-left 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
 }
 
-.purple {
-  background-color: #9b59b6;
-  color: white;
+.start-from-top {
+  animation: slide-from-top 2s cubic-bezier(0.8, -0.55, 0.27, 1.55);
 }
 
-.orange {
-  background-color: #f39c12;
-  color: white;
+.start-from-right {
+  animation: slide-from-right 3s cubic-bezier(0.8, -0.55, 0.27, 1.55);
 }
 
-.brown {
-  background-color: #8e44ad;
-  color: white;
+.start-from-bottom {
+  animation: slide-from-bottom 4s cubic-bezier(0.8, -0.55, 0.27, 1.55);
 }
 
-.gray {
-  background-color: #7f8c8d;
-  color: white;
+.start-from-left-buttom {
+  animation: slide-from-bottom 5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+.start-from-right-buttom {
+  animation: slide-from-bottom 2.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
 }
 
-.black {
-  background-color: #34495e;
-  color: white;
+
+@keyframes slide-to-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 
-/* Clases de colores adicionales para los cuadrados */
-.teal {
-  background-color: #1abc9c;
-  color: white;
+@keyframes slide-to-top {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
-.lime {
-  background-color: #cddc39;
-  color: black;
+@keyframes slide-to-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
+
+@keyframes slide-to-bottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-to-left-bottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-to-right-bottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+
+/* Aplicar animaciones de cierre a los elementos específicos */
+.slide-to-left {
+  animation: slide-to-left 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+.slide-to-top {
+  animation: slide-to-top 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+.slide-to-right {
+  animation: slide-to-right 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+.slide-to-bottom {
+  animation: slide-to-bottom 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+.slide-to-left-bottom {
+  animation: slide-to-left-bottom 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+.slide-to-right-bottom {
+  animation: slide-to-right-bottom 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+/* Agrega la clase `animate-close` para controlar las animaciones de cierre */
+.animate-close {
+  animation: slide-close 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  opacity: 1;
+}
+
+/* Define las animaciones de cierre */
+
+/* Define diferentes retrasos para cada botón */

@@ -1,0 +1,149 @@
+body {
+  margin-top: 50px; /* Ajusta según el tamaño de tu navbar */
+}
+.container-fluid {
+  margin-top: 20px;
+  background-color: #f5f5dc; /* Color crema claro */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+}
+.table {
+  margin-top:470px !important;
+  animation: slide-down 0.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  display: block; /* Esto asegura que la imagen se muestre como un bloque */
+  margin: 0 auto; /* Centra horizontalmente */
+ 
+
+  
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    font-size: 12px;
+  }
+}
+.planilla-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Alinea verticalmente */
+    height: 100vh; /* Esto asegura que la planilla ocupe toda la altura de la ventana */
+  }
+  
+  .planilla-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más estético */
+  }
+  
+  /* Resto del código... */
+  
+  
+  .planilla-table th, .planilla-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Mayor espacio entre el texto y el borde */
+    text-align: left;
+  }
+  
+  .planilla-table th {
+    background-color: #f2f2f2;
+  }
+  .total-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #4CAF50;
+  }
+  
+/* Estilos para la tabla: Resaltar números */
+.planilla-table td, .planilla-table th {
+  text-align: right; /* Alinea números a la derecha */
+}
+
+.planilla-table td,
+.planilla-table th:not(:first-child) {
+  /* Añade color de fondo y bordes redondeados a las celdas con números */
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* Añade color a los botones */
+button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+/* Añade color al contenedor total */
+.total-container {
+  margin-top: 20px;
+  background-color: #e5f7e9; /* Color de fondo */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más estético */
+}
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  .container-fluid {
+    margin-top: 20px;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .table {
+      font-size: 12px; /* Reducir el tamaño de fuente para dispositivos pequeños */
+    }
+  }
+  
+  .fondo {
+
+    background-color: antiquewhite !important;
+  }

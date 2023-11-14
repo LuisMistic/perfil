@@ -1,9 +1,14 @@
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-  <div class="row">
-    <div class="col-md-3 col-sm-4 col-6" *ngFor="let square of squares">
-      <div class="square" [ngClass]="square.colorClass" (mouseover)="onMouseOver()">
-        <p>{{ square.text }}</p>
-      </div>
-    </div>
-  </div>
+<div class="container" [ngClass]="{
+  'slide-to-left': mostrarAnimacionCierre,
+  'slide-to-top': mostrarAnimacionCierre,
+  'slide-to-right': mostrarAnimacionCierre,
+  'slide-to-bottom': mostrarAnimacionCierre,
+  'slide-to-left-bottom': mostrarAnimacionCierre,
+  'slide-to-right-bottom': mostrarAnimacionCierre
+}">  <button class="cuadro boton1 start-from-left" (click)="cambiarComponente('planilla')">Planilla</button>
+  <button class="cuadro boton2 start-from-top">Botón 2</button>
+  <button class="cuadro boton3 start-from-right">Botón 3</button>
+  <button class="cuadro boton4 start-from-bottom">Botón 4</button>
+  <button class="cuadro boton5 start-from-left-buttom">Botón 5</button>
+  <button class="cuadro boton6 start-from-right-buttom">Botón 6</button>
 </div>

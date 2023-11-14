@@ -11,19 +11,41 @@
     align-items: center;
 }
 
+
   
   /* Estilo para la animación de la imagen */
  /* Estilo para la animación de la imagen */
+.animate-img {
+  margin-top:150px !important;
+  animation: arriba 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  display: block; /* Esto asegura que la imagen se muestre como un bloque */
+ 
+
+}
+
+@keyframes arriba {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(80);
+    opacity: 1;
+  }
+}
 .animate-logo {
     margin-top:470px !important;
-    animation: slide-down 1s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+    animation: slide-down 0.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
     display: block; /* Esto asegura que la imagen se muestre como un bloque */
     margin: 0 auto; /* Centra horizontalmente */
+   
+
+    
 }
 
   @keyframes slide-down {
     from {
-      transform: translateY(-100%);
+      transform: translateY(100%);
       opacity: 0;
     }
     to {
@@ -39,7 +61,7 @@
 
 @keyframes slide-down {
   from {
-      transform: translateY(-100%);
+      transform: translateY(100%);
       opacity: 0;
   }
   to {
@@ -59,6 +81,7 @@
       opacity: 0; /* Termina con opacidad nula */
   }
 }
+
 /* Estilo para el contenedor del texto superpuesto */
 .text-overlay {
   position: absolute;
@@ -89,3 +112,38 @@
 .d{
   color: brown;
 }
+
+
+.text-overlay-reverse {
+  animation: slide-up 1.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+}
+
+
+
+/* Define la animación inversa */
+@keyframes slide-up {
+  from {
+      transform: translateY(50); /* Comienza desde la posición actual */
+      opacity: 1; /* Comienza con opacidad completa */
+  }
+  to {
+      transform: translateY(-100%); /* Termina arriba de la pantalla */
+      opacity: 0; /* Termina con opacidad nula */
+  }
+}
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca la imagen de fondo detrás de los otros elementos */
+  background-image: url('../../../assets/univer.jpeg'); /* Ruta de la imagen */
+  background-size: cover; /* Cubre toda la pantalla */
+  background-position: center; /* Centra la imagen en la pantalla */
+   /* Ajusta la opacidad según tus preferencias (0.0 es completamente transparente, 1.0 es completamente opaco) */
+  mask-image: linear-gradient(transparent 30%, black 100%); /* Máscara para hacer los bordes más visibles gradualmente */
+}
+
+/* Estilos restantes para los otros elementos (main-section, title-logo-container, text-overlay, etc.) */
+/* ... */

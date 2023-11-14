@@ -1,0 +1,58 @@
+<div class="container-fluid " [ngClass]="{'table': mostrarAnimacionCierre}">
+  <div class="row justify-content-center table">
+    <div class="col-md-8">
+
+<div class="planilla-container">
+  <form (submit)="agregarProductoDesdeFormulario()">
+    <label for="nombre">Producto:</label>
+    <input type="text" id="nombre" [(ngModel)]="nuevoProducto.nombre" required>
+
+    <label for="estilo">Estilo:</label>
+    <input type="text" id="estilo" [(ngModel)]="nuevoProducto.estilo" required>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" [(ngModel)]="nuevoProducto.precio" required>
+
+    <button type="submit">Agregar Producto</button>
+  </form>
+
+  <table class="planilla-table fondo">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Estilo</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+        <th>Acciones</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody class="fondo">
+      <tr *ngFor="let producto of productos; let i = index">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.estilo }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>{{ producto.subtotal }}</td>
+        <td>
+          <button (click)="venderProducto(producto)">
+            <i class="material-icons">check</i>
+          </button>
+          <button (click)="borrarProducto(i)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+        <td>{{ producto.fecha }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="total-container">
+    <p>Total: {{ calcularTotal() }}</p>
+    <button (click)="reiniciarPlanilla()">Reiniciar Planilla</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>

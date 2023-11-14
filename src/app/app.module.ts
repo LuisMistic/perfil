@@ -9,6 +9,8 @@ import { InicialComponent } from './componentes/inicial/inicial.component';
 import { MiPerfilComponent } from './componentes/mi-perfil/mi-perfil.component';
 import { MatrixComponent } from './componentes/matrix/matrix.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { PlanillaComponent } from './componentes/planilla/planilla.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
     InicialComponent,
     MiPerfilComponent,
     MatrixComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    PlanillaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
