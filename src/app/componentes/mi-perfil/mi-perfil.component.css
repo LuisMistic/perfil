@@ -33,6 +33,17 @@
     opacity: 1;
   }
 }
+
+.animate-logo1 {
+  margin-top:400px !important;
+  margin-left: 450px !important;
+  animation: slide-down 0.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);
+  display: block; /* Esto asegura que la imagen se muestre como un bloque */
+  margin: 0 auto; /* Centra horizontalmente */
+ 
+
+  
+}
 .animate-logo {
     margin-top:470px !important;
     animation: slide-down 0.5s cubic-bezier(0.8, -0.55, 0.27, 1.55);

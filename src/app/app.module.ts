@@ -11,6 +11,7 @@ import { MatrixComponent } from './componentes/matrix/matrix.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { PlanillaComponent } from './componentes/planilla/planilla.component';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './componentes/planilla/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     MiPerfilComponent,
     MatrixComponent,
     ProyectosComponent,
-    PlanillaComponent
+    PlanillaComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

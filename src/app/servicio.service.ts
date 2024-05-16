@@ -9,8 +9,10 @@ export class ServicioCompartido {
   mostrarAnimacionCierre: boolean = false;
   private componenteCierreSubject = new BehaviorSubject<boolean>(false);
 
-  constructor() {
-  }
+  private clientesSubject = new BehaviorSubject<Cliente[]>([]);
+  public clientes$ = this.clientesSubject.asObservable();
+
+  constructor() { }
 
   // Método para mostrar u ocultar el Navbar
   notificarAnimacionCierre(animacion: boolean = false) {
@@ -20,16 +22,39 @@ export class ServicioCompartido {
 
   obtenerNotificacionCierre(): Observable<boolean> {
     return this.componenteCierreSubject.asObservable();
-   
   }
 
   cambiarComponente(nombre: string) {
-    this.notificarAnimacionCierre(true); // Agregar esta línea para notificar la animación de cierre
-    console.log(" notifiacion de cierre con exito");
+    this.notificarAnimacionCierre(true);
+    console.log("notifiacion de cierre con exito");
     setTimeout(() => {
       this.currentComponent = nombre;
-      this.notificarAnimacionCierre(false); // Notificar que la animación de cierre ha terminado
-    }, 900); // Ajusta el tiempo según la duración de tu animación inversa
+      this.notificarAnimacionCierre(false);
+    }, 900);
     console.log("tiempo funciona");
   }
+
+  actualizarClientes(clientes: Cliente[]): void {
+    this.clientesSubject.next(clientes);
+  }
+
+  obtenerClientes(): Observable<Cliente[]> {
+    return this.clientes$;
+  }
+}
+
+interface Producto {
+  nombre: string;
+  estilo: string;
+  precio: number;
+  cantidad: number;
+  subtotal: number;
+  fechaCompra?: string;
+}
+
+interface Cliente {
+  nombre: string;
+  productos: Producto[];
+  subtotal: number;
+  fecha: string;
 }
